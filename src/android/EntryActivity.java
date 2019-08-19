@@ -111,7 +111,7 @@ public class EntryActivity extends Activity implements IWXAPIEventHandler {
     protected void startMainActivity() {
         Intent intent = new Intent();
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setPackage(getApplicationContext().getPackageName());
+        intent.setClassName(getApplicationContext().getPackageName(), getApplicationContext().getPackageName() + ".MainActivity");
         getApplicationContext().startActivity(intent);
     }
 
